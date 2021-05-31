@@ -19,7 +19,7 @@ $mainColor: rgba(230,218,206,1);
         height: 100px;
         margin: 0 auto;
         padding: 0 50px;
-        z-index: 0;
+        z-index: 1;
     }
     a {
         text-decoration: none;
@@ -37,6 +37,8 @@ $mainColor: rgba(230,218,206,1);
         }
         .navbar__jobtitle {
             line-height: 1.5;
+            font-size: 1.2rem;
+            margin-left: 10px;
         }
     }
 
@@ -48,9 +50,83 @@ $mainColor: rgba(230,218,206,1);
         .navbar__item {
             list-style: none;
             margin: 0 10px;
+
+            & .active {
+                color: #d4bca3;
+            }
         }
         .navbar__link:hover {
             color: #d4bca3;
+        }
+
+    }
+
+    @media screen and (max-width:900px) {
+        .navbar__container {
+            z-index: 1;
+            position: relative;
+            .navbar__logo {
+                display: block;
+                min-width: 200px;
+                padding: 20px 0;
+            }
+            .navbar__jobtitle {
+                margin: 0;
+                display: block;
+            }
+            .navbar__menu{
+                display: block;
+                position: absolute;
+                top : -1000px;
+                left: 0;
+                height: calc(100vh - 100px);
+                width: 100%;
+                z-index: 99;
+                background-color: #ffffff;
+                font-size: 1.6rem;
+                transition: ease 0.5s;
+                .navbar__item {
+                    padding: 1rem 0;
+                    text-align: center;
+                    height: 80px;
+                    margin: 2rem 0;
+                }
+
+                &.active {
+                    top:100px;
+                    transition: ease 0.3s;
+                }
+            }
+            .navbar__toggle {
+                min-width: 30px;
+                width: 30px;
+                align-self: center;
+                cursor: pointer;
+                .bar {
+                    width: 100%;
+                    height: 4px;
+                    background-color: rgba($color: #000000, $alpha: 1.0);
+                    margin-bottom: 5px;
+                }
+        
+                .bar:last-child {
+                    margin-bottom: 0;
+                }
+
+                &.active {
+                    .bar:nth-child(1) {
+                        transform: rotate(45deg) translate(2px,11px);
+                        transition: ease 0.3s ;
+                    }
+                    .bar:nth-child(2) {
+                        visibility: hidden;
+                    }
+                    .bar:nth-child(3) {
+                        transform: rotate(-45deg) translate(2px,-11px);
+                        transition: ease 0.3s ;
+                    }
+                }
+            }
         }
     }
 }

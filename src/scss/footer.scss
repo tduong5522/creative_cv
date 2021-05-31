@@ -24,6 +24,19 @@
         .footer__info--header {
             text-align: center;
             font-weight: bold;
+            padding-bottom: 5px;
+        }
+        .footer__social {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 0;
+            img {
+                width:20px;
+                height: 20px;
+                margin: 0 5px;
+                cursor: pointer;
+            }
         }
     }
 }
