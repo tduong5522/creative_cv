@@ -1,18 +1,21 @@
 import React, {useState} from 'react';
+import {Link} from 'react-router-dom';
+
+import NavMenu from "./NavMenu";
+
 import '../../scss/navbar.scss'
-import NavMenu from "./NavMenu"
 
 const KEY = {
   ABOUT_ME : 'ABOUT ME',
   RESUME : 'RESUME',
-  PROJECT : 'PROJECT',
+  PROJECTS : 'PROJECTS',
   CONTACT : 'CONTACT',
 }
 
 const navMenu = [
   KEY.ABOUT_ME,
   KEY.RESUME,
-  KEY.PROJECT,
+  KEY.PROJECTS,
   KEY.CONTACT
 ]
 
@@ -31,8 +34,8 @@ const HeaderNavbar = () => {
     <nav className="navbar">
       <div className="navbar__container">
         <div className="navbar__logo">
-          <a href="#" className="navbar__name">Maya Nelson </a>
-          <a href="#" className="navbar__jobtitle"> Project Manager</a>
+          <Link to="/" className="navbar__name">Maya Nelson </Link>
+          <Link to="/" className="navbar__jobtitle"> Project Manager</Link>
         </div>
         <div className={`navbar__toggle ${isMobile?'active':''}`} id="mobile-menu" onClick={setMobileMode}>
           <div className="bar"></div>
