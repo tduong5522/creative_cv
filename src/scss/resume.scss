@@ -1,0 +1,75 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+$widthMobile: 900px;
+
+.resume__container{
+    background-color: #e6dace;
+    padding: 20px 0;
+    .resume__header{
+        margin: 50px auto;
+        display: flex;
+        position: relative;
+        justify-content: center;
+        align-items: center;
+        &::before {
+            content: '';
+            width: 20px;
+            height: 20px;
+            background-color: #0050FF;
+            margin-right: 5px;
+        }
+    }
+
+    section {
+        width: 700px;
+        padding: 20px 0;
+        margin: 0 auto;
+
+        @media screen and (max-width:$widthMobile) {
+            width: initial;
+            margin: 0 20px;
+        }
+    }
+
+    .resume__card {
+        background-color: #ffffff;
+        margin : 20px 0;
+        padding: 40px;
+        display: flex;
+        justify-content: space-between;
+        border-radius: 3px;
+        box-shadow: 0 0 10px rgba($color: #000000, $alpha: 0.1);
+        &--info {
+            width: 200px;
+            .card__time {
+                margin-bottom: 10px;
+                color: #0050FF;
+                font-weight: 900;
+            }
+
+            .card__title {
+                margin-bottom: 10px;
+            }
+        }
+
+        &--description {
+            width: 400px;
+            .card__description {
+                text-align: justify;
+                white-space:pre-line;
+            }
+        }
+        @media screen and (max-width:$widthMobile) {
+            display: block;
+        }
+    }
+
+    .resume__experience {
+       
+
+    }
+}

@@ -1,10 +1,12 @@
 import React from "react";
-import "../../scss/home.scss";
+
 import avatar from "../../images/avatar.jpg";
 import facebook from "../../svg/facebook-f-brands.svg";
 import instagram from "../../svg/instagram-brands.svg";
 import linkedin from "../../svg/linkedin-in-brands.svg";
 import skype from "../../svg/skype-brands.svg";
+
+import "../../scss/home.scss";
 
 const HomePage = () => {
   return (
