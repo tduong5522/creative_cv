@@ -15,7 +15,7 @@ $mainColor: rgba(230,218,206,1);
 
         .home__card {
             position: absolute;
-            right: -10%;
+            right: -70px;
             top: 130px;
             width: 375px;
             height: 525px;
@@ -137,4 +137,53 @@ $mainColor: rgba(230,218,206,1);
         }
     }
 
+    @media screen and (max-width: 900px) {
+        display: block;
+        width: 100%;
+        height: 100%;
+
+        .home__info {
+            width: 100%;
+            height: 200px;
+            text-align: center;
+            background-color: #ffffff;
+            min-width: inherit;
+            .home__card {
+                position: relative;
+                top : 20px;
+                right: unset;
+                width: 280px;
+                height: 375px;
+                margin: 0 auto;
+                padding-top: 20px;
+                .card__img {
+                    width: 120px;
+                    height: 120px;
+                    margin: 0 auto;
+                }
+            }
+        }
+
+        .home__introduce {
+            width: inherit;
+            margin: 0 auto;
+            text-align: center;
+            background-color: #e6dace;
+            .introduce__header{
+                margin: 0;
+                padding: 200px 0 20px;
+            }
+            .introduce__button{
+                width: initial;
+                margin-bottom: 0;
+                button {
+                    margin-bottom: 0;
+                }
+            }
+            .introduce__content{
+                width: 100%;
+                padding: 30px;
+            }
+        }
+    }
 }

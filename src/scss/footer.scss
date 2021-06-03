@@ -39,4 +39,24 @@
             }
         }
     }
+
+    @media screen and (max-width:900px) {
+        position: relative;
+        flex-wrap: wrap;
+        padding: 0 20px 40px;
+        height: initial;
+        .footer__right {
+            flex-wrap: wrap;
+            justify-content: start;
+            .footer__info--header{
+                text-align: left;
+            }
+        }
+        .footer__left {
+            min-width: inherit;
+            position: absolute;
+            left:40px;
+            bottom: 20px;
+        }
+    }
 }

@@ -6,7 +6,7 @@ import instagram from "../../svg/instagram-brands.svg";
 import linkedin from "../../svg/linkedin-in-brands.svg";
 import skype from "../../svg/skype-brands.svg";
 
-const Home = () => {
+const HomePage = () => {
   return (
     <div className="home__container">
       <div className="home__info">
@@ -40,4 +40,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default HomePage;
