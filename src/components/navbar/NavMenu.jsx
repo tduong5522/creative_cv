@@ -1,6 +1,6 @@
 import React from 'react'
 import {Link} from 'react-router-dom';
-import {convertStringToUrl} from "../../share/formatString";
+import {convertStringToUrl} from "../../helper/formatString";
 const NavMenu = ({items, onClick, active,isMobile}) => {
     console.log(convertStringToUrl(active));
     return (

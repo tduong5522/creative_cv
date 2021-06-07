@@ -1,6 +1,6 @@
 import React from 'react'
 
-import {experiences, education, professionalSkills, skills, languages} from "../../share/dataResume";
+import {experiences, education, professionalSkills, skills, languages} from "../../helper/dataResume";
 
 import "../../scss/resume.scss";
 
@@ -20,7 +20,11 @@ const Resume = () => {
                 <h2 className="resume__title">
                    Education
                 </h2>
-                
+                <div className="education__container">
+                    <h3 className="education__time">{education.time}</h3>
+                    <h4 className="education__university">{education.universityName}</h4>
+                    <h5 className="education__major">{education.major}</h5>
+                </div>
             </section>
             <section className="resume__skill">
                 <h2 className="resume__title">
@@ -50,19 +54,18 @@ const ResumeList = ({list}) =>(
      </ul>
 )
 
-
 const CardResume = ({time, title, subTitle, description}) => {
-return (
-    <div className="resume__card">
-        <div className="resume__card--info">
-            <h3 className="card__time">{time}</h3>
-            <h4 className="card__title">{title}</h4>
-            <h5 className="card__subtitle">{subTitle}</h5>
+    return (
+        <div className="resume__card">
+            <div className="resume__card--info">
+                <h3 className="card__time">{time}</h3>
+                <h4 className="card__title">{title}</h4>
+                <h5 className="card__subtitle">{subTitle}</h5>
+            </div>
+            <div className="resume__card--description">
+                <p className="card__description">{description}</p>
+            </div>
         </div>
-        <div className="resume__card--description">
-            <p className="card__description">{description}</p>
-        </div>
-    </div>
     )
 }
 

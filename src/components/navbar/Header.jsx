@@ -23,7 +23,8 @@ const HeaderNavbar = () => {
   const [itemActice, setItemActice] = useState(KEY.ABOUT_ME);
   const [isMobile, setIsMobile] = useState(false);
   const onHandleClick = e => {
-    setItemActice(e.target.innerHTML)
+    setItemActice(e.target.innerHTML);
+    setIsMobile(false);
   }
 
   const setMobileMode = () => {

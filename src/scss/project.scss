@@ -1,0 +1,97 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+$widthMobile: 900px;
+
+.project__container{
+    background-color: #e6dace;
+    padding: 20px 0;
+    .project__header{
+        margin: 50px auto;
+        display: flex;
+        position: relative;
+        justify-content: center;
+        align-items: center;
+        &::before {
+            content: '';
+            width: 20px;
+            height: 20px;
+            background-color: #0050FF;
+            margin-right: 5px;
+        }
+        @media screen and (max-width:$widthMobile) {
+            margin-top: 30px;
+        }
+    }
+    .card__container {
+        width: 750px;
+        margin: 40px auto;
+        background-color: #ffffff;
+        display: flex;
+        div {
+            padding: 40px;
+        }
+
+        .card__main {
+            width: 450px;
+
+            .card__header{
+                width: 100%;
+                padding: 0;
+                margin-bottom: 40px;
+                position: relative;
+                &::before {
+                    content: '';
+                    width: 10px;
+                    height: 100%;
+                    background-color: #0050FF;
+                    position: absolute;
+                    left: -40px;
+                }
+    
+                .card__name {
+                    font-weight: 900;
+                    color: #0050FF;
+                    margin-bottom: 15px;
+                }
+            }
+
+            .card__description{
+                text-align: justify;
+                margin: 10px 0;
+                line-height: 1.5;
+            }
+            @media screen and (max-width:$widthMobile) {
+                width: 100%;
+                padding: 20px
+            }
+        }
+
+        .card__list{
+            padding-left: 25px;
+            
+            .card__item{
+                padding: 5px 0;
+            }
+        }
+
+        .card__technologies {
+            background-color: #fae5d8;
+            width: 300px;
+
+            @media screen and (max-width:$widthMobile) {
+                width: 100%;
+            }
+        }
+
+        @media screen and (max-width:$widthMobile) {
+            display: block;
+            width: calc(100% - 20px);
+            padding: 20px;
+        }
+    }
+}

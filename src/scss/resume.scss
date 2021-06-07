@@ -65,11 +65,42 @@ $widthMobile: 900px;
         }
         @media screen and (max-width:$widthMobile) {
             display: block;
+            &--info {
+                width: 100%;
+                margin-bottom: 10px;
+            }
+
+            &--description {
+                width: 100%;
+            }
         }
     }
 
-    .resume__experience {
-       
+    .education__container {
+        background-color: #ffffff;
+        margin : 20px 0;
+        padding: 40px;
+        .education__time {
+            font-weight: 900;
+            color :#0050FF;
+            margin-bottom: 20px;
+        }
+        .education__university{
+            margin-bottom: 10px;
+        }
 
+    }
+
+    .resume__list{
+        background-color: #ffffff;
+        margin : 20px 0;
+        padding: 40px;
+        line-height: 1.5;
+        display: flex;
+        flex-wrap: wrap;
+        .resume__item{
+            width: 50%;
+            list-style: none;
+        }
     }
 }

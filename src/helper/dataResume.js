@@ -21,7 +21,7 @@ export const experiences =  [
 
 export const education = {
     time : "2019 - Present",
-    universityName: "UIT (University of Information Technology)",
+    universityName: "University of Information Technology (UIT)",
     major: "Bachelor of Engineering in Security Information",
     descriptionTask: "I’m a great place for you to tell a story and let your users know a little more about you.\n I’m a great place for you to tell a story and let your users know a little more about you."
 }
